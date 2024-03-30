@@ -1,0 +1,10 @@
+select ad,soyad, maas from CALISANLAR where calisan_birim_id in ('1','2')
+select ad,soyad, maas from CALISANLAR where maas >= (select max(maas)from CALISANLAR)
+select calisan_birim_id, COUNT (calisan_birim_id) as 'Çalışan Sayısı' FROM CALISANLAR GROUP BY calisan_birim_id
+select unvan_calisan, count (unvan_calisan) as 'Çalışan Sayısı' FROM UNVAN GROUP BY unvan_calisan HAVING COUNT (unvan_calisan) >1
+select ad,soyad, maas from CALISANLAR WHERE maas between 50000 and 100000
+select ad,soyad calisan_birim_id, unvan_calisan, ikramiye_ucret from CALISANLAR INNER JOIN IKRAMIYE ON calisan_id = ikramiye_calisan_id INNER JOIN UNVAN ON calisan_id = unvan_calisan_id
+
+select ad,soyad, unvan_calisan from CALISANLAR INNER JOIN UNVAN ON calisan_id = unvan_calisan_id where unvan_calisan in ('YÖNETİCİ','MÜDÜR')
+
+select calisan_birim_id, ad, soyad, maas from CALISANLAR where maas in (SELECT max(maas) FROM CALISANLAR group by calisan_birim_id)

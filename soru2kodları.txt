@@ -1,0 +1,58 @@
+INSERT INTO CALISANLAR values ('1','İsmail','İşeri','100000','2014-02-20 00:00:00.000','1')
+INSERT INTO CALISANLAR values ('2','Hami','Satılmış','80000','2014-06-11 00:00:00.000','1')
+INSERT INTO CALISANLAR values ('3','Durmuş','Şahin','30000','2014-02-20 00:00:00.000','2')
+INSERT INTO CALISANLAR values ('4','Kağan','Yazar','500000','2014-02-20 00:00:00.000','3')
+INSERT INTO CALISANLAR values ('5','Meryem','Soysaldı','500000','2014-06-11 00:00:00.000','3')
+INSERT INTO CALISANLAR values ('6','Duygu','Akşehir','200000','2014-06-11 00:00:00.000','2')
+INSERT INTO CALISANLAR values ('7','Kübra','Seyhan','75000','2014-01-20 00:00:00.000','1')
+INSERT INTO CALISANLAR values ('8','Gülcan','Yıldız','90000','2014-04-11 00:00:00.000','3')
+
+SELECT TOP (1000) [calisan_id]
+	,[ad]
+	,[soyad]
+	,[maas]
+	,[katilimTarih]
+	,[calisan_birim_id]
+FROM [odevfoy3].[dbo].[CALISANLAR]
+
+
+
+INSERT INTO BIRIM values ('1','Yazılım')
+INSERT INTO BIRIM values ('2','Donanım')
+INSERT INTO BIRIM values ('3','Güvenlik')
+
+
+SELECT TOP (1000) [birim_id]
+	,[birim_ad]
+FROM [odevfoy3].[dbo].[BIRIM]
+
+
+INSERT INTO UNVAN values ('1','YÖNETİCİ','2016-02-20 00:00:00.000')
+INSERT INTO UNVAN values ('2','PERSONEL','2016-06-11 00:00:00.000')
+INSERT INTO UNVAN values ('8','PERSONEL','2016-02-20 00:00:00.000')
+INSERT INTO UNVAN values ('5','MÜDÜR','2016-02-20 00:00:00.000')
+INSERT INTO UNVAN values ('4','PERSONEL YARDIMCISI','2016-06-11 00:00:00.000')
+INSERT INTO UNVAN values ('7','PERSONEL','2016-02-20 00:00:00.000')
+INSERT INTO UNVAN values ('6','TAKIM LİDERİ','2016-06-11 00:00:00.000')
+INSERT INTO UNVAN values ('3','TAKIM LİDERİ','2016-02-20 00:00:00.000')
+
+
+SELECT TOP (1000) [unvan_calisan_id]
+	,[unvan_calisan]
+	,[unvan_tarih]
+FROM [odevfoy3].[dbo].[UNVAN]
+
+
+
+INSERT INTO IKRAMIYE values ('1','4500','2016-02-20 00:00:00.000')
+INSERT INTO IKRAMIYE values ('1','5000','2016-02-20 00:00:00.000')
+INSERT INTO IKRAMIYE values ('2','3000','2016-06-11 00:00:00.000')
+INSERT INTO IKRAMIYE values ('2','3500','2016-06-11 00:00:00.000')
+INSERT INTO IKRAMIYE values ('3','4000','2016-02-20 00:00:00.000')
+
+
+SELECT TOP (1000) [ikramiye_calisan_id]
+	,[ikramiye_ucret]
+	,[ikramiye_tarih]
+FROM [odevfoy3].[dbo].[IKRAMIYE]
+
